@@ -10,6 +10,7 @@ import {
   AuctionCreateView,
   AuctionView,
   HomeView,
+  MainView,
 } from './views';
 import { AdminView } from './views/admin';
 import { BillingView } from './views/auction/billing';
@@ -54,7 +55,9 @@ export function Routes() {
               path="/auction/:id/billing"
               component={() => <BillingView />}
             />
-            <Route path="/" component={() => <HomeView />} />
+            <Route path="/metaplex" component={() => <HomeView />} />
+            <Route path="/" component={() => <MainView />} />
+
           </Switch>
         </Providers>
       </HashRouter>
